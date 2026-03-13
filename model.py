@@ -4,7 +4,7 @@ import math
 
 class LayerNormalization(nn.Module):
 
-    def __init__(self, features: int, eps:float=10**-6) -> None:
+    def __init__(self, features: int, eps:float=1e-6) -> None:
         super().__init__()
         self.eps = eps
         self.alpha = nn.Parameter(torch.ones(features)) # alpha is a learnable parameter
